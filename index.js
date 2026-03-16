@@ -1,22 +1,49 @@
 import usandoConsoleLog from "./usandoConsoleLog.js";
 import matematica from "./matematica.js";
-import alumno from "./alumno.js";
+import Alumno from "./alumno.js";
+import copiar from "./usandoFs.js";
+import urlParseada from "./url.js"; 
+import urlParseadaSafe from "./parsearUrlSafe.js";
 
-const mensaje = usandoConsoleLog("Alan");
 
-const suma = matematica.sumar(1,2) ;
-const dividi = matematica.dividir(2,1);
-const multiplica = matematica.multiplicar(2,9);
-const sacarAreaCircul = matematica.sacarAreaCirculo(400);
-
-function mostrarMensaje(){
-
-    console.log(suma)
-    console.log(dividi)
-    console.log(multiplica)
-    console.log(sacarAreaCircul)
-
+function ej1(){
+    const mensaje = usandoConsoleLog("Alan");
+    console.log(mensaje);
 }
-const alumno1= new alumno.Alumno()
+
+function ej2(){
+    const suma = matematica.sumar(1,2);
+    const dividi = matematica.dividir(2,1);
+    const multiplica = matematica.multiplicar(2,9);
+    const sacarAreaCircul = matematica.sacarAreaCirculo(400);
+
+    console.log(suma, dividi, multiplica, sacarAreaCircul);
+}
+
+function ej3(){
+    const alumne = new Alumno("toilet", "9");
+    console.log(alumne);
+}
+
+function ej4(){
+    copiar("entrada.txt", "salida.txt");
+}
+function ej5(){
+    const miUrl = new URL("http://www.ort.edu.ar:8080/alumnos/index.htm?curso=2022&mes=mayo");
+   console.log(urlParseada(miUrl));
+}
+function ej6(){
+    const miUrl = ":8080/alumnos/index.htm?curso=2022&mes=mayo";
+
+   console.log(urlParseadaSafe(miUrl));
+}
+function mostrarMensaje(){
+    ej1();
+    ej2();
+    ej3();
+    ej4();
+    ej5();
+    ej6();
+}
 
 mostrarMensaje();
