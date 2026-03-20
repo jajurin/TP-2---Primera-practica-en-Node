@@ -3,7 +3,7 @@ function usandoConsoleLog(nombre) {
     
     let concatenado = saludo+nombre
 
-    console.log(`${saludo} ${nombre}, eh aqui tu salduo concatenado ${concatenado}`)
+   return(`${saludo} ${nombre}, eh aqui tu salduo concatenado ${concatenado}`)
     
 }
 export default usandoConsoleLog

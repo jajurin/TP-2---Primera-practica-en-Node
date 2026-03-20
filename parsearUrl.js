@@ -21,7 +21,7 @@ try{
   return objetoUrl; 
 
   } catch (error) {
-    console.log("el error es: " + error.message);
+    return ("el error es: " + error.message);
   }
 }
 

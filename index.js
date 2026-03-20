@@ -4,6 +4,7 @@ import Alumno from "./alumno.js";
 import copiar from "./usandoFs.js";
 import urlParseada from "./url.js"; 
 import urlParseadaSafe from "./parsearUrlSafe.js";
+import obtenerMonedaPais from "./ObtenerMon.js";
 
 
 function ej1(){
@@ -29,13 +30,18 @@ function ej4(){
     copiar("entrada.txt", "salida.txt");
 }
 function ej5(){
-    const miUrl = new URL("http://www.ort.edu.ar:8080/alumnos/index.htm?curso=2022&mes=mayo");
-   console.log(urlParseada(miUrl));
+    const miUrl = "http://www.ort.edu.ar:8080/alumnos/index.htm?curso=2022&mes=mayo";
+    console.log(urlParseada(miUrl));
 }
 function ej6(){
-    const miUrl = ":8080/alumnos/index.htm?curso=2022&mes=mayo";
+    const miUrl = ":8080/alumnos/index.htm?curso=2022&mes=mayo"; //lo mandamos directamente a parsearurlsafe
 
    console.log(urlParseadaSafe(miUrl));
+}
+function ej7(){
+let pais= "us"
+    
+ console.log(obtenerMonedaPais(pais))
 }
 function mostrarMensaje(){
     ej1();
@@ -44,6 +50,7 @@ function mostrarMensaje(){
     ej4();
     ej5();
     ej6();
+    ej7();
 }
 
 mostrarMensaje();

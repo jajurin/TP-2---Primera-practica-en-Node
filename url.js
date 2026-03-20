@@ -1,9 +1,7 @@
 import parsearUrl from "./parsearUrl.js";
 
-function urlParseada(url) {
-
-
-
+function urlParseada(urlString) {
+  const url = new URL(urlString);
   return parsearUrl(url);
 }
 
